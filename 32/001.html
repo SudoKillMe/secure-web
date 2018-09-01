@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <iframe src="002.html" frameborder="0" name="iframe1"></iframe>
+
+  <input type="button" onclick="go()" value="密码->">
+
+  <script>
+    function go () {
+      try {
+        var x = iframe1.document.form1.passwd.value;
+        document.getElementById('out').innerHTML = x;
+      } catch (e) {
+        alert(e.message);
+      }
+    }
+  </script>
+  <span id="out"></span>
+</body>
+</html>
